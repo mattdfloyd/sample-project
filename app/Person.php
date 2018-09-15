@@ -31,4 +31,12 @@ class Person extends Model
     {
         return $this->hasOne(Contact::class);
     }
+
+    public function getFullNameAttribute()
+    {
+        return vsprintf('%s %s', [
+            $this->first_name,
+            $this->last_name,
+        ]);
+    }
 }

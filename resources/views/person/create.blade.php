@@ -2,7 +2,8 @@
 
 @section('body')
 
-<div class="max-w-md mx-auto">
+<div class="max-w-md mx-auto py-4">
+    <h2>Create Person</h2>
     <div class="bg-white shadow-md rounded px-8 py-6 my-4">
         <form action="{{ action('PersonController@store') }}" method="POST" id="form">
             @csrf
