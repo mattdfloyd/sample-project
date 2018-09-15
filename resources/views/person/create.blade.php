@@ -5,6 +5,17 @@
 <div class="max-w-md mx-auto py-4">
     <h2>Create Person</h2>
     <div class="bg-white shadow-md rounded px-8 py-6 my-4">
+        @if ($errors->count())
+            <div class="bg-red-lightest border-red text-red-darkest border-t-4 py-2 px-4 mb-4">
+                <p class="font-bold text-lg mb-1">Whoops!</p>
+                <ul class="list-reset">
+                    @foreach ($errors->all() as $message)
+                        <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="{{ action('PersonController@store') }}" method="POST" id="form">
             @csrf
             <div class="mb-4">

@@ -9,7 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     {!! NoCaptcha::renderJs() !!}
   </head>
-  <body class="font-sans antialiased bg-grey-lighter text-black leading-tight">
+  <body class="font-sans antialiased bg-grey-lighter text-black leading-normal">
     <div id="app">
       @yield('body')
     </div>
