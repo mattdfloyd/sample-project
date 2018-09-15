@@ -82,7 +82,9 @@ class PersonController extends Controller
      */
     public function show(Person $person)
     {
-        return $person;
+        $person->load('contact');
+
+        return view('person.show', compact('person'));
     }
 
     /**
