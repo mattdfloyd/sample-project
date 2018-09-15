@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PersonController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('person/create', [PersonController::class, 'create']);
+Route::post('person', [PersonController::class, 'store']);
+Route::get('person/{person}', [PersonController::class, 'show']);
